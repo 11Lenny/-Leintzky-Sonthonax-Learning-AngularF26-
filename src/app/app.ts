@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, numberAttribute, signal } from '@angular/core';
 
 @Component({
   imports: [],
@@ -9,12 +9,31 @@ import { Component, signal } from '@angular/core';
 export class App {
   protected readonly title = signal('Leintzky-Sonthonax-Learning-AngularF26');
 
-  team: {name: string} & {city: string} = {
-    name: 'Canadiens',
-    city: 'Montreal'
-  };
-  championships: {titles: number} & {finalsAppearances: number} = {
-    titles: 24,
-    finalsAppearances: 33
-  };
+  export sportTeams {
+    let teamDescription = 'Teams';
+
+    let team: number;
+    let name:string;
+    let city:string;
+    let championships: number;
+    let greatestPlayer:string;
+    let contender: boolean;
+
+    /*
+    let team = "string";
+    let name = "string";
+    let city = "string";
+    let championships = "number";
+    let greatestPlayer = "string";
+    let contender = "boolean";
+     */
+
+
+     teamList: teams = [
+    { team: 1, name: 'Canadiens', city: 'Montreal', championships: 24, greatestPlayer:'Maurice Richard', contender:true},
+    { team: 2, name: 'Lakers', city: 'Los Angeles', championships: 17, greatestPlayer:'Kobe Bryant', contender:false},
+    { team: 3, name: 'Patriots', city: 'New England', championships: 6, greatestPlayer:'Tom Brady', contender:false},
+  ];
+
+
 }
