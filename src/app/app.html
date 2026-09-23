@@ -4,8 +4,23 @@
   <p>{{team.championships}}</p>
   <p>{{team.greatestPlayer}}</p>
   <p>{{team.contender}}</p>
+}
+@empty {"nothing to display"}
 
+<!--TODO complete the if for next week -->
 
+@if (teamList){
+contender: Yes
+} @else {
+  contender: No
 }
 
+@switch (teamList){
+  @case (true){
+    <p>This Team is a contender!</p>
+  }
+  @case (false){
+    <p>This Team is not a contender!</p>
+  }
+}
 
