@@ -4,6 +4,16 @@
   <p>{{team.championships}}</p>
   <p>{{team.greatestPlayer}}</p>
   <p>{{team.contender}}</p>
+
+
+  @switch (team.contender){
+    @case (true){
+      <p>This Team is a contender!</p>
+    }
+    @case (false){
+      <p>This Team is not a contender!</p>
+    }
+  }
 }
 @empty {"nothing to display"}
 
@@ -15,12 +25,4 @@ contender: Yes
   contender: No
 }
 
-@switch (teamList){
-  @case (true){
-    <p>This Team is a contender!</p>
-  }
-  @case (false){
-    <p>This Team is not a contender!</p>
-  }
-}
 
