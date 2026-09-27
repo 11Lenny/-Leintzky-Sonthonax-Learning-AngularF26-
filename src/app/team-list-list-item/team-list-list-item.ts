@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { Teams } from '../Shared/Models/teams';
 
 @Component({
   imports: [],
@@ -6,4 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './team-list-list-item.css',
   templateUrl: './team-list-list-item.html',
 })
-export class TeamListListItem {}
+export class TeamListListItem {teams = input.required<Teams>();}
+

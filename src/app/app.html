@@ -1,3 +1,4 @@
+
 @for (team of teamList ; track team.name){
   <h1>{{team.team}}</h1>
   <p>{{team.name}}</p>
@@ -13,8 +14,10 @@
     @case (false){
       <p>This Team is not a contender!</p>
     }
+
   }
 }
+
 @empty {"nothing to display"}
 
 <!--TODO complete the if for next week -->
@@ -25,4 +28,5 @@ contender: Yes
   contender: No
 }
 
+<app-team-list-list></app-team-list-list>
 
