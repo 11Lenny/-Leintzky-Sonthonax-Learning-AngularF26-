@@ -2,14 +2,13 @@ import { Component } from '@angular/core';
 import { Teams } from '../Shared/Models/teams';
 import { TeamListListItem } from '../team-list-list-item/team-list-list-item';
 
-
 @Component({
   imports: [TeamListListItem],
-  selector: 'app-team-list-list',
-  styleUrl: './team-list-list.css',
-  templateUrl: './team-list-list.html',
+  selector: 'app-team-list',
+  styleUrl: './team-list.css',
+  templateUrl: './team-list.html',
 })
-export class TeamListList {
+export class TeamList {
   teamList: Teams[] = [
     {
       team: 1,

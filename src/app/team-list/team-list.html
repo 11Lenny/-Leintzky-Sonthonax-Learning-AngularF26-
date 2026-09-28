@@ -1,6 +1,10 @@
-<p>team-list-list works!</p>
+<header>Championship teams</header>
+
+<p>team-list works!</p>
 @for (team of teamList; track team.team) {
   <app-team-list-list-item [teams]="team" />
 }@empty {
   <p>No teams to show yet.</p>
 }
+
+

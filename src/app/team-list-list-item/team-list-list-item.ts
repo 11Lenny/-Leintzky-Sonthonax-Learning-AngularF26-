@@ -1,6 +1,7 @@
 import { Component, input } from '@angular/core';
 import { Teams } from '../Shared/Models/teams';
 
+
 @Component({
   imports: [],
   selector: 'app-team-list-list-item',
@@ -8,4 +9,5 @@ import { Teams } from '../Shared/Models/teams';
   templateUrl: './team-list-list-item.html',
 })
 export class TeamListListItem {teams = input.required<Teams>();}
+
 
