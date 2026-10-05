@@ -1,9 +1,9 @@
 import { Component, numberAttribute, signal } from '@angular/core';
 import {Teams} from './Shared/Models/teams';
-import { TeamListList } from './team-list-list/team-list-list';
+import { TeamList } from './team-list/team-list';
 
 @Component({
-  imports: [TeamListList],
+  imports: [TeamList],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',

@@ -1,4 +1,4 @@
-export interface Teams {
+export interface Team {
   team: number;
   name: string;
   city: string;

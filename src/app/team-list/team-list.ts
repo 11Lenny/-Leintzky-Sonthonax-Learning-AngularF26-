@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { Teams } from '../Shared/Models/teams';
-import { TeamListListItem } from '../team-list-list-item/team-list-list-item';
+import { Team } from '../Shared/Models/teams';
+import { TeamListItem } from '../team-list-item/team-list-item';
 
 @Component({
-  imports: [TeamListListItem],
+  imports: [TeamListItem],
   selector: 'app-team-list',
   styleUrl: './team-list.css',
   templateUrl: './team-list.html',
 })
 export class TeamList {
-  teamList: Teams[] = [
+  teamList: Team[] = [
     {
       team: 1,
       name: 'Canadiens',
@@ -43,4 +43,9 @@ export class TeamList {
       contender: false,
     },
   ];
+}
+export interface ContentEvent {
+  clickedTeam: number;
+  clicked: 'opened' | 'favourited';
+
 }
