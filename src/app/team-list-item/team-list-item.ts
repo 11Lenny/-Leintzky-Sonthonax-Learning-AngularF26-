@@ -1,5 +1,5 @@
 import { Component, input, output } from '@angular/core';
-import { Teams } from '../Shared/Models/teams';
+import { Team} from '../Shared/Models/teams';
 
 @Component({
   imports: [],
@@ -8,7 +8,7 @@ import { Teams } from '../Shared/Models/teams';
   templateUrl: './team-list-item.html',
 })
 export class TeamListItem {
-  teams = input.required<Teams>();
+  teams = input.required<Team>();
   opened = output<ContentEvent>();
   onClick(): void {
     this.opened.emit({ clickedTeam: this.teams() .team, clicked: 'opened'});

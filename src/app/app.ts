@@ -1,5 +1,5 @@
 import { Component, numberAttribute, signal } from '@angular/core';
-import {Teams} from './Shared/Models/teams';
+import {Team} from './Shared/Models/teams';
 import { TeamList } from './team-list/team-list';
 
 @Component({
@@ -11,7 +11,7 @@ import { TeamList } from './team-list/team-list';
 export class App {
   protected readonly title = signal('Leintzky-Sonthonax-Learning-AngularF26');
 
-  teamList: Teams[] = [
+  teamList: Team[] = [
     {
       team: 1,
       name: 'Canadiens',
