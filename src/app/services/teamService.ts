@@ -1,18 +1,22 @@
-import {Injectable, signal, effect, computed } from '@angular/core';
-import { Team } from '../Shared/Models/teams';
+import {Injectable, signal, effect, computed, inject } from '@angular/core';
+import { Team, TEAMS_CONFIG } from '../Shared/Models/teams';
 import { TeamList } from '../team-list/team-list';
 
 
-@Injectable({ providedIn: 'root' })
-export class teamService {
 
-  private isCanadian = computed(() => {
-    if (this.Team().city == 'Canadian') {
-      return 'The Great white North';
-    } else {
-      return 'American Team';
-    }
-    });
+@Injectable({ providedIn: 'root' })
+
+// private config = inject(BREWERY_CONFIG);
+export class teamService {
+  private config = inject(TEAMS_CONFIG);
+  private teams = signal<Team[]>([
+  //TODO receive input from something
+    { team: 1, name: 'Canadiens', city: 'Montreal', championships: 24, greatestPlayer: 'Maurice Richard', contender: true, },
+    { team: 2, name: 'Lakers', city: 'Los Angeles', championships: 17, greatestPlayer: 'Kobe Bryant', contender: false, },
+    { team: 3, name: 'Patriots', city: 'New England', championships: 6, greatestPlayer: 'Tom Brady', contender: false, },
+    { team: 4, name: 'Yankees', city: 'New York', championships: 27, greatestPlayer: 'George Herman Ruth', contender: false, },
+  ]);
+  canadianCount = computed(() => this.teams().filter(c => c.city === 'Montreal').length);
 
 
   /**

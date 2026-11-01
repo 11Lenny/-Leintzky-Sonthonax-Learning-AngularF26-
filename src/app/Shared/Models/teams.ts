@@ -8,7 +8,7 @@ export interface TeamsConfig {
   defaultCity: string;
 }
 //TODO go to own file in the shared folder
- //const TEAMS_CONFIG = new InjectionToken<TeamsConfig>('teamService.config');
+ export const TEAMS_CONFIG = new InjectionToken<TeamsConfig>('teamService.config');
 
 
 //TODO this belong in the seervice

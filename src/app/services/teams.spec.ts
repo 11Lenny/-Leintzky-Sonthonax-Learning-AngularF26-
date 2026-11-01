@@ -1,15 +1,15 @@
 import { TestBed } from '@angular/core/testing';
-import { Team } from './teamService';
+import { teamService } from './teamService';
 import { inject } from '@angular/core';
 
-private config: TEAMS_CONFIG = inject(TEAMS_CONFIG);
+
 
 describe('Teams', () => {
-  let service: Team;
+  let service: teamService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(Team);
+    service = TestBed.inject(teamService);
   });
 
   it('should be created', () => {

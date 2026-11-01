@@ -5,6 +5,9 @@ import { TeamListItem } from '../team-list-item/team-list-item';
 
 
 @Injectable({ providedIn: 'root' })
-export class MockContentService { provide: TeamList, useClass: MockContentService }
+export class MockContentService {
 
-private TeamListItem = inject(MockContentService);
+
+  private service = inject(MockContentService);
+}
+
