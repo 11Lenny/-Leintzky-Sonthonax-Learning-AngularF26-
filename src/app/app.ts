@@ -1,9 +1,10 @@
 import { Component, numberAttribute, signal } from '@angular/core';
 import {Team} from './Shared/Models/teams';
 import { TeamList } from './team-list/team-list';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-  imports: [TeamList],
+  imports: [TeamList, RouterOutlet],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',

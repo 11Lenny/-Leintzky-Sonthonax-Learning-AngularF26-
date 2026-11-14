@@ -23,3 +23,4 @@ export interface Team {
   greatestPlayer: string;
   contender: boolean;
 }
+//Change this data with the matching API data

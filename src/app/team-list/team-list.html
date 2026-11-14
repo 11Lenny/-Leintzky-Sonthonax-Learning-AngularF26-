@@ -2,9 +2,12 @@
 
 <p>team-list works!</p>
 @for (team of teamList; track team.team) {
+  <a [routerLink]="['/teams', team.team]">
   <app-team-list-item [teams]="team" />
+  </a>
 }@empty {
   <p>No teamService to show yet.</p>
 }
-
-
+/*
+'Teams/:id'
+*/

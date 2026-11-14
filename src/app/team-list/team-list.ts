@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Team } from '../Shared/Models/teams';
 import { TeamListItem } from '../team-list-item/team-list-item';
+import { RouterLink} from '@angular/router';
 
 @Component({
-  imports: [TeamListItem],
+  imports: [TeamListItem, RouterLink],
   selector: 'app-team-list',
   styleUrl: './team-list.css',
   templateUrl: './team-list.html',
