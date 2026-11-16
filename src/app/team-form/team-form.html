@@ -1,0 +1,12 @@
+<p>team-form works!</p>
+
+<form [formGroup]="teamForm" (ngSubmit)="onSubmit()">
+  <input formControlName="name" placeholder="Name" />
+  <input formControlName="city" placeholder="City" />
+  <input type="number" formControlName="championships">
+  <input type="checkbox" formControlName="contender">
+
+  <button type="submit" [disabled]="teamForm.invalid">
+    Add Team
+  </button>
+</form>
